@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки - Havit H2002d</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="product.html">Опис товару</a></li>
+                    <li><a href="order.html">Оформити замовлення</a></li>
+                    <li><a href="feedback.html">Відгуки</a></li>
+                </ul>
+            </nav>
+            <h1>Відгуки</h1>
+        </header>
+
+        <section class="feedback-section">
+            <h2>Залишити свій відгук</h2>
+            <form action="#" method="post">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="comment">Ваш коментар:</label>
+                <textarea id="comment" name="comment" rows="5" required></textarea>
+
+                <button type="submit">Надіслати відгук</button>
+            </form>
+
+            <h2>Відгуки покупців:</h2>
+            <!-- Секція для відображення відгуків -->
+            <div class="customer-feedback">
+                <p><strong>Олена</strong>: Дуже зручні навушники, звук просто відмінний!</p>
+                <p><strong>Іван</strong>: Рекомендую, найкращий вибір для геймерів!</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Магазин Ігрових Аксесуарів</p>
+        </footer>
+    </div>
+</body>
+</html>
