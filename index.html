@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ігрові Навушники Havit H2002d</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/logo.png" alt="Логотип сайту" class="logo">
+            <div class="header-title">JAPANESE STORE .K.I.T.S.U.N.E.</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="product.html">Опис товару</a></li>
+                    <li><a href="order.html">Оформити замовлення</a></li>
+                    <li><a href="feedback.html">Відгуки</a></li>
+                </ul>
+            </nav>
+            <h1>Havit — Ідеальний Вибір для Тебе</h1>
+        </header>
+
+        <section class="hero">
+            <img src="./images/main_havit.jpg" alt="Havit H2002d" class="hero-image">
+            <div class="text-with-border">
+                <h2 class="text-with-border">Занурся у гру з комфортом і якістю звуку!</h2>
+
+                <!-- Відеоогляд між текстом і кнопкою -->
+                <div class="video-container">
+                    <iframe 
+                        id="video-frame"
+                        src="https://www.youtube.com/embed/C1g7vchlA_o?autoplay=1&mute=1&loop=1&playlist=C1g7vchlA_o" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allow="autoplay; fullscreen" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <a href="order.html" class="button">Замовити зараз</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Магазин Ігрових Аксесуарів</p>
+        <p>Контактна інформація</p>
+    </footer>
+
+    <script>
+        function toggleVideoSound(isVisible) {
+            const videoFrame = document.getElementById('video-frame');
+            let src = "https://www.youtube.com/embed/C1g7vchlA_o?autoplay=1&loop=1&playlist=C1g7vchlA_o";
+            videoFrame.src = isVisible ? src : src + "&mute=1";
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => toggleVideoSound(entry.isIntersecting));
+        }, { threshold: 0.5 });
+
+        const video = document.getElementById('video-frame');
+        observer.observe(video);
+    </script>
+</body>
+</html>
